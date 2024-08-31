@@ -16,6 +16,11 @@ setup(
     url="https://github.com/nicoguertler/graph_rl",
     keywords=["reinforcement learning", "hierarchical reinforcement learning"],
     packages=find_packages(),
-    install_requires=["numpy", "gym==0.21.0", "tianshou==0.3.1", "pyglet", "dyn_rl_benchmarks"]
+    install_requires=[
+        "numpy",
+        "gym>=0.21.0,<=0.26.2",  # Specify a range to cover gym versions from 0.21.0 up to 0.26.2
+        "tianshou>=0.3.1,<0.6.0",  # Allow newer versions of tianshou until just before the next major release
+        "pyglet",
+        "dyn_rl_benchmarks"
+    ]
 )
-
